@@ -56,8 +56,8 @@ public class AuthController1 {
 		return "Hello world";
 	}
 
-	@GetMapping("/hey")
+	@GetMapping("/hei")
 	public String getStrin(){
-		return "Hello Nithin";
+		return "Hello Nithinnn";
 	}
 }
