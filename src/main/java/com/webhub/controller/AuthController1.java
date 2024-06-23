@@ -55,4 +55,9 @@ public class AuthController1 {
 	public String getString(){
 		return "Hello world";
 	}
+
+	@GetMapping("/hey")
+	public String getStrin(){
+		return "Hello Nithin";
+	}
 }
