@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webhub1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webhub1
+  template:
+    metadata:
+      labels:
+        app: webhub1
+    spec:
+      containers:
+      - name: webhub1
+        image: nithinlashetti/test1
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webhub1-service
+spec:
+  selector:
+    app: webhub1
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer
