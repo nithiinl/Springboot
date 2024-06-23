@@ -51,4 +51,8 @@ public class AuthController1 {
 		public ResponseEntity<?> validateToken(@RequestParam String token) {
 			return this.service.validateTokenAccessOther(token);
 		}
+	@GetMapping("/string")
+	public String getString(){
+		return "Hello world";
+	}
 }
